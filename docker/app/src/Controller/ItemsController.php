@@ -75,13 +75,14 @@ class ItemsController extends AbstractController
             }
             else{
                 $item = $entityManager->getRepository(Dataitems::class)->find($id);
-                $marke = $Row['B'];
-                $material= $Row['C'];
-                $item->setId($id);
-                $item->setMarke($marke);
-                $item->setMaterial($material);
-                $entityManager->persist($item); 
-                $entityManager->flush();
+                if($item != null){
+                    $marke = $Row['B'];
+                    $material= $Row['C'];
+                    $item->setMarke($marke);
+                    $item->setMaterial($material);
+                    $entityManager->persist($item); 
+                    $entityManager->flush();
+                }
             }
         }
         echo '<script language="javascript">';
