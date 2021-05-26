@@ -1,21 +1,21 @@
 # SLVtask
 
-## Requirements
+## Anforderungen
   - docker
   - docker-compose
 
-## Process to run
+## Zu laufender Prozess
   - ``` sudo docker-compose up --build ```
-  - Open http://localhost:8080/ in browser.
-  - Check the box and upload the data file. You will receive a alert for confirmation.
-  - Uncheck the box and upload the data file to update the existing data. You will receive a alert for confirmation.
+  - http://localhost:8080/ im Browser öffnen.
+  - Aktivieren Sie das Kontrollkästchen und laden Sie die Datendatei hoch. Sie erhalten eine Meldung zur Bestätigung.
+  - Deaktivieren Sie das Kontrollkästchen und laden Sie die Datendatei hoch, um die vorhandenen Daten zu aktualisieren. Sie erhalten eine Warnung zur Bestätigung.
 
-## Check data in MySQL
+## Daten in MySQL prüfen
 
-  Run the following commands to see the data saved in the database.
+  Führen Sie die folgenden Befehle aus, um die in der Datenbank gespeicherten Daten zu sehen.
 
   - ``` docker exec -it mysql8-container bash ```
   - ``` mysql -u root -p ``` 
-  - Enter the password: 'secret'
+  - Geben Sie das Passwort ein: 'geheim'
   - ``` use slv-table; ```
   - ``` select * from dataitems; ```
